@@ -1,0 +1,122 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-09-20T10:39:37.419Z",
+    "end": "2024-09-20T10:39:37.659Z",
+    "duration": 240,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "28743126-0985-4f43-af59-84df80ea00c6",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c0aa4348-3077-4ebd-83b5-e7209fc6c0c7",
+          "title": "dgit功能测试",
+          "fullFile": "C:\\Users\\98317\\Desktop\\dgit\\test\\dgit.test.ts",
+          "file": "\\test\\dgit.test.ts",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook: deleteTarget",
+              "fullTitle": "dgit功能测试 \"before all\" hook: deleteTarget",
+              "timedOut": false,
+              "duration": 1,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "new Promise(resolve => {\n        if (fs_1.default.existsSync(basePath)) {\n            return Clean([basePath], resolve);\n        }\n        resolve();\n    })",
+              "err": {},
+              "uuid": "e8745171-4446-4435-be43-4d428a05505f",
+              "parentUUID": "c0aa4348-3077-4ebd-83b5-e7209fc6c0c7",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "dgit 能拉取远端git指定目录代码",
+              "fullTitle": "dgit功能测试 dgit 能拉取远端git指定目录代码",
+              "timedOut": false,
+              "duration": 226,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "tslib_1.__awaiter(void 0, void 0, void 0, function* () {\n        yield dgit_1.default({\n            owner: 'xlei1123',\n            repoName: 'limu-ele-pro',\n            ref: 'main',\n            relativePath: 'package.json',\n            gitType: 'gitee',\n        }, './testDir', { log: true }, {\n            onSuccess() {\n                chai_1.expect(fs_1.default.existsSync(target)).to.be.equal(true);\n            },\n        });\n    })",
+              "err": {
+                "message": "SyntaxError: Unexpected token F in JSON at position 4",
+                "estack": "SyntaxError: Unexpected token F in JSON at position 4\n    at JSON.parse (<anonymous>)\n    at C:\\Users\\98317\\Desktop\\dgit\\src\\dgit.ts:117:29\n    at Generator.next (<anonymous>)\n    at fulfilled (node_modules\\.pnpm\\tslib@2.7.0\\node_modules\\tslib\\tslib.js:166:62)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)",
+                "diff": null
+              },
+              "uuid": "2ffe5ec2-bd68-48b1-bc9f-dc17288adcd9",
+              "parentUUID": "c0aa4348-3077-4ebd-83b5-e7209fc6c0c7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "2ffe5ec2-bd68-48b1-bc9f-dc17288adcd9"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 226,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 60000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 60000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "6.2.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": null,
+      "version": "4.1.0"
+    }
+  }
+}
