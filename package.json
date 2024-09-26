@@ -1,7 +1,7 @@
 {
-  "name": "@limu/dgit",
+  "name": "@limu-x/dgit",
   "version": "0.0.12",
-  "description": "@limu/dgit download gitrepo file",
+  "description": "@limu-x/dgit download gitrepo file",
   "bin": {
     "dgit": "./bin/cmd.js"
   },

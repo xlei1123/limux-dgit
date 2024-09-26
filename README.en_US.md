@@ -8,12 +8,12 @@
 
 [npm-image]: https://img.shields.io/npm/v/:packageName.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/:packageName
-[travis-image]: https://www.travis-ci.org/JohnApache/:packageName.svg
-[travis-url]: https://travis-ci.org/JohnApache/:packageName
-[codecov-image]: https://codecov.io/gh/JohnApache/:packageName/branch/master/graph/badge.svg
-[codecov-url]: https://codecov.io/gh/JohnApache/:packageName
-[snyk-image]: https://snyk.io/test/github/JohnApache/:packageName/badge.svg?targetFile=package.json
-[snyk-url]: https://snyk.io/test/github/JohnApache/:packageName?targetFile=package.json
+[travis-image]: https://www.travis-ci.org/xlei1123/:packageName.svg
+[travis-url]: https://travis-ci.org/xlei1123/:packageName
+[codecov-image]: https://codecov.io/gh/xlei1123/:packageName/branch/master/graph/badge.svg
+[codecov-url]: https://codecov.io/gh/xlei1123/:packageName
+[snyk-image]: https://snyk.io/test/github/xlei1123/:packageName/badge.svg?targetFile=package.json
+[snyk-url]: https://snyk.io/test/github/xlei1123/:packageName?targetFile=package.json
 [download-image]: https://img.shields.io/npm/dm/:packageName.svg?style=flat-square
 [download-url]: https://npmjs.org/package/:packageName -->
 
@@ -33,29 +33,29 @@
 ## Install
 + Global Installation
 ```bash
-$ npm install @limu/dgit -g
+$ npm install @limu-x/dgit -g
 ```
 + Local Installation
 ```bash
-$ npm install @limu/dgit --save
-$ yarn add @limu/dgit
+$ npm install @limu-x/dgit --save
+$ yarn add @limu-x/dgit
 ```
 
 ## Usage
 + Global installation, using as command line
 ```bash
-$ dgit d https://github.com/JohnApache/hasaki-cli/tree/master/src -d ./abc
+$ dgit d https://github.com/xlei1123/limu-ele-pro/tree/master/src -d ./abc
 ```
 
 + Local installation as module
 ```js
-import dgit from '@limu/dgit';
+import dgit from '@limu-x/dgit';
 
 (async () => {
     await dgit(
         {
-            owner: 'JohnApache',
-            repoName: 'hasaki-cli',
+            owner: 'xlei1123',
+            repoName: 'limu-ele-pro',
             ref: 'master',
             relativePath: 'src',
         },
@@ -86,11 +86,11 @@ import dgit from '@limu/dgit';
 
 + Local installation, configurable parameters when used as a module   
     ```js
-    import dgit from '@limu/dgit';
+    import dgit from '@limu-x/dgit';
     import path from 'path';
     const repoOption = {
-        owner: 'JohnApache'; // Git repository author name
-        repoName: 'hasaki-cli'; // Git repo name
+        owner: 'xlei1123'; // Git repository author name
+        repoName: 'limu-ele-pro'; // Git repo name
         ref: 'master'; // Git repo branch，commit hash or tagname，
         relativePath: '.'; // Specifies the relative location of the directory or file that git needs to download
         username: ''; // Specify git account name.
@@ -99,7 +99,7 @@ import dgit from '@limu/dgit';
     }
 
     const githubLinkOption = {
-        githubLink: 'https://github.com/JohnApache/hasaki-cli/blob/master/PLAN.txt',
+        githubLink: 'https://github.com/xlei1123/limu-ele-pro/blob/master/package.json',
         // You can also directly specify the download path address of gitHub
     }
 
@@ -147,7 +147,7 @@ When downloading the private repo, you need to provide download permission. At t
 
     Download permission is provided by passing in user name and password. When passing in user name, password can not be provided explicitly. When password is not provided, password input option will appear password prompt;
     ```bash
-    $ dgit d https://github.com/JohnApache/hasaki-cli/tree/master/src -d ./abc -u JohnApache
+    $ dgit d https://github.com/xlei1123/limu-ele-pro/tree/master/src -d ./abc -u xlei1123
     ```
 + OAuth2 token
 
@@ -156,11 +156,11 @@ When downloading the private repo, you need to provide download permission. At t
     Set the token method, which is located in Github Settings -> Developer settings -> Personal access tokens
 
     ```bash
-    $ dgit d https://github.com/JohnApache/hasaki-cli/tree/master/src -d ./abc -t OAUTH-TOKEN
+    $ dgit d https://github.com/xlei1123/limu-ele-pro/tree/master/src -d ./abc -t OAUTH-TOKEN
     ```
 
 ## Questions
-Please open an issue [here](https://github.com/JohnApache/dgit/issues).
+Please open an issue [here](https://github.com/xlei1123/dgit/issues).
 
 ## License
 

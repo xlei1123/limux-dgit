@@ -1,4 +1,4 @@
-declare const giteeRepoUtils: (owner: string, repoName: string, ref: string) => {
+declare const giteeRepoUtils: (owner: string, repoName: string, ref: string, token?: string | undefined) => {
     getRepoTreeUrl: () => string;
     getDownloadUrl: (path: string) => string;
 };

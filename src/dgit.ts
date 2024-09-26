@@ -15,7 +15,7 @@ import {
     ParseGitHttpsLink, isHttpsLink, MakeDirs,
 } from './cmd/utils';
 
-const UserAgent = '@limu/dgit';
+const UserAgent = '@limu-x/dgit';
 const DEFAULT_PARALLEL_LIMIT = 10;
 const MAX_PARALLEL_LIMIT = 100;
 const JSON_STRINGIFY_PADDING = 2;
@@ -113,7 +113,6 @@ const dgit = async (
 
         logger(' loading remote repo tree succeed.');
         afterLoadTree && afterLoadTree();
-        console.log(body, 1111);
         const result = JSON.parse(body);
 
         if (!result.tree || result.tree.length <= 0) {

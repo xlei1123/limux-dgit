@@ -33,12 +33,12 @@
 ## 安装
 + 全局安装
 ```bash
-$ npm install @limu/dgit -g
+$ npm install @limu-x/dgit -g
 ```
 + 本地安装
 ```bash
-$ npm install @limu/dgit --save
-$ yarn add @limu/dgit
+$ npm install @limu-x/dgit --save
+$ yarn add @limu-x/dgit
 ```
 
 ## 使用
@@ -51,7 +51,7 @@ $ dgit d https://github.com/xlei1123/limu-ele-pro/tree/master/src -d ./abc
 
 + 本地安装，作为模块使用
 ```js
-import dgit from '@limu/dgit';
+import dgit from '@limu-x/dgit';
 
 (async () => {
     await dgit(
@@ -88,7 +88,7 @@ import dgit from '@limu/dgit';
 
 + 局部安装，作为模块使用时，可配置参数
     ```js
-    import dgit from '@limu/dgit';
+    import dgit from '@limu-x/dgit';
     import path from 'path';
     const repoOption = {
         owner: 'xlei1123'; // git 仓库作者名
