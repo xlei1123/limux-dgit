@@ -24,6 +24,7 @@ export interface RepoOptionType extends PrivateOption {
     relativePath?: string; // download relative path
     gitLink?: string;
     gitType: GitType;
+    token?: string;
 }
 
 export interface RepoTreeNode {

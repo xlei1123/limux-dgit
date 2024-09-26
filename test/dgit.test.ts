@@ -51,6 +51,7 @@ describe('dgit功能测试', () => {
                 ref         : 'main',
                 relativePath: 'package.json',
                 gitType     : 'gitee',
+                token       : '27fb2108f685ee79dc303ad7e21f2834',
             },
             './testDir',
             { log: true },
@@ -67,6 +68,7 @@ describe('dgit功能测试', () => {
             {
                 gitLink: 'https://gitee.com/xlei1123/limu-ele-pro/raw/main/package.json',
                 gitType: 'gitee',
+                token  : '27fb2108f685ee79dc303ad7e21f2834',
             },
             './testDir',
             {
@@ -86,6 +88,7 @@ describe('dgit功能测试', () => {
             {
                 gitLink: 'https://gitee.com/xlei1123/limu-ele-pro/raw/main/src/components/LimuPagination.vue',
                 gitType: 'gitee',
+                token  : '27fb2108f685ee79dc303ad7e21f2834',
             },
             './testDir/src/components',
             {
@@ -105,6 +108,7 @@ describe('dgit功能测试', () => {
             {
                 gitLink: 'https://gitee.com/xlei1123/limu-ele-pro/tree/main/src/views/list2',
                 gitType: 'gitee',
+                token  : '27fb2108f685ee79dc303ad7e21f2834',
             },
             './testDir/src/views/list2',
             {
@@ -125,6 +129,7 @@ describe('dgit功能测试', () => {
             {
                 gitLink: 'https://gitee.com/xlei1123/limu-ele-pro/tree/main/src/views',
                 gitType: 'gitee',
+                token  : '27fb2108f685ee79dc303ad7e21f2834',
             },
             './testDir/src/views',
             {

@@ -1,5 +1,10 @@
-const giteeRepoUtils = (owner: string, repoName: string, ref: string) => ({
-    getRepoTreeUrl: () => `https://gitee.com/api/v5/repos/${ owner }/${ repoName }/git/trees/${ ref }?recursive=1`,
+const giteeRepoUtils = (owner: string, repoName: string, ref: string, token?: string) => ({
+    getRepoTreeUrl: () => {
+        if (token) {
+            return `https://gitee.com/api/v5/repos/${ owner }/${ repoName }/git/trees/${ ref }?recursive=1&access_token=${ token }`;
+        }
+        return `https://gitee.com/api/v5/repos/${ owner }/${ repoName }/git/trees/${ ref }?recursive=1`;
+    },
     getDownloadUrl: (path: string) => `https://gitee.com/${ owner }/${ repoName }/raw/${ ref }/${ path }`,
 });
 

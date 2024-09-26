@@ -8,12 +8,12 @@
 
 [npm-image]: https://img.shields.io/npm/v/:packageName.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/:packageName
-[travis-image]: https://www.travis-ci.org/JohnApache/:packageName.svg
-[travis-url]: https://travis-ci.org/JohnApache/:packageName
-[codecov-image]: https://codecov.io/gh/JohnApache/:packageName/branch/master/graph/badge.svg
-[codecov-url]: https://codecov.io/gh/JohnApache/:packageName
-[snyk-image]: https://snyk.io/test/github/JohnApache/:packageName/badge.svg?targetFile=package.json
-[snyk-url]: https://snyk.io/test/github/JohnApache/:packageName?targetFile=package.json
+[travis-image]: https://www.travis-ci.org/xlei1123/:packageName.svg
+[travis-url]: https://travis-ci.org/xlei1123/:packageName
+[codecov-image]: https://codecov.io/gh/xlei1123/:packageName/branch/master/graph/badge.svg
+[codecov-url]: https://codecov.io/gh/xlei1123/:packageName
+[snyk-image]: https://snyk.io/test/github/xlei1123/:packageName/badge.svg?targetFile=package.json
+[snyk-url]: https://snyk.io/test/github/xlei1123/:packageName?targetFile=package.json
 [download-image]: https://img.shields.io/npm/dm/:packageName.svg?style=flat-square
 [download-url]: https://npmjs.org/package/:packageName -->
 
@@ -42,9 +42,11 @@ $ yarn add @limu/dgit
 ```
 
 ## 使用
+
+> 特别说明，默认仓库托管在github上，国内可以拉取gitee仓库代码，请配置`gitType: 'gitee'`
 + 全局安装，作为命令行使用
 ```bash
-$ dgit d https://github.com/JohnApache/hasaki-cli/tree/master/src -d ./abc
+$ dgit d https://github.com/xlei1123/limu-ele-pro/tree/master/src -d ./abc
 ```
 
 + 本地安装，作为模块使用
@@ -54,10 +56,11 @@ import dgit from '@limu/dgit';
 (async () => {
     await dgit(
         {
-            owner: 'JohnApache',
-            repoName: 'hasaki-cli',
+            owner: 'xlei1123',
+            repoName: 'limu-ele-pro',
             ref: 'master',
             relativePath: 'src',
+            gitType: 'gitee'
         },
         './aaa',
     );
@@ -88,8 +91,8 @@ import dgit from '@limu/dgit';
     import dgit from '@limu/dgit';
     import path from 'path';
     const repoOption = {
-        owner: 'JohnApache'; // git 仓库作者名
-        repoName: 'hasaki-cli'; // git 仓库名称
+        owner: 'xlei1123'; // git 仓库作者名
+        repoName: 'limu-ele-pro'; // git 仓库名称
         ref: 'master'; // git 仓库指定 branch，commit 或 tag，
         relativePath: '.'; // 指定git所需要下载的目录或者文件相对位置
         username: ''; // 指定git用户名, 在下载私有仓库时需要的配置参数.
@@ -98,7 +101,7 @@ import dgit from '@limu/dgit';
     }
 
     const githubLinkOption = {
-        githubLink: 'https://github.com/JohnApache/hasaki-cli/blob/master/PLAN.txt', // 也可以直接指定github 需要下载路径的地址
+        githubLink: 'https://github.com/xlei1123/limu-ele-pro/blob/master/PLAN.txt', // 也可以直接指定github 需要下载路径的地址
     }
 
     const destPath = path.resolve(__dirname, './aaa'); // 目标下载路径
@@ -145,7 +148,7 @@ import dgit from '@limu/dgit';
     通过传入 用户名 和 密码，来提供下载权限, 当传入用户名，可以不显式提供密码，在没有提供密码时，会单独出现密码提示
 
     ```bash
-    $ dgit d https://github.com/JohnApache/hasaki-cli/tree/master/src -d ./abc -u JohnApache
+    $ dgit d https://github.com/xlei1123/limu-ele-pro/tree/master/src -d ./abc -u xlei1123
     ```
 + OAuth2 token
 
@@ -154,7 +157,7 @@ import dgit from '@limu/dgit';
     设置token方法 ，就位于Github Settings -> Developer settings -> Personal access tokens
 
     ```bash
-    $ dgit d https://github.com/JohnApache/hasaki-cli/tree/master/src -d ./abc -t OAUTH-TOKEN
+    $ dgit d https://github.com/xlei1123/limu-ele-pro/tree/master/src -d ./abc -t OAUTH-TOKEN
     ```
 
 2. 下载资源失败 `raw.githubusercontent.com` 连接失败  
@@ -172,7 +175,7 @@ import dgit from '@limu/dgit';
     ```
 
 ## 建议
-欢迎创建issue 或者 pr [here](https://github.com/JohnApache/dgit/issues).
+欢迎创建issue 或者 pr [here](https://github.com/xlei1123/dgit/issues).
 
 ## License
 

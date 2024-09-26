@@ -77,7 +77,7 @@ const dgit = async (
         onErrorReject = reject;
     });
     const repo = gitType === 'gitee' ? giteeRepoUtils : githubRepoUtils;
-    const { getRepoTreeUrl, getDownloadUrl } = repo(owner, repoName, ref);
+    const { getRepoTreeUrl, getDownloadUrl } = repo(owner, repoName, ref, token);
     const url = getRepoTreeUrl();
     const headers = {
         'User-Agent' : UserAgent,
