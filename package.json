@@ -1,6 +1,6 @@
 {
   "name": "@limu-x/dgit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "@limu-x/dgit download gitrepo file",
   "bin": {
     "dgit": "./bin/cmd.js"
@@ -19,7 +19,8 @@
     "test:mocha": "nyc --reporter=text mocha --require ts-node/register 'test/**/*.{ts,tsx}' -t 60000",
     "test:mocha:reporter": "nyc --reporter=lcov --reporter=text mocha --require ts-node/register 'test/**/*.{ts,tsx}' -t 60000 --reporter=mochawesome",
     "watch:ts": "tsc --watch",
-    "prepublishOnly": "npm run test:mocha && npm run lint && npm run build:ts"
+    "prepublishOnly": "npm run test:mocha && npm run lint && npm run build:ts",
+    "release": "release-it"
   },
   "lint-staged": {
     "**/*.{jsx,js}": [
@@ -34,6 +35,7 @@
   },
   "devDependencies": {
     "@dking/eslint-config-typescript": "^0.0.4",
+    "@release-it/conventional-changelog": "^8.0.2",
     "@types/chai": "^4.2.0",
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.7.5",
@@ -66,6 +68,7 @@
     "inquirer": "^7.0.0",
     "ora": "^4.0.3",
     "progress": "^2.0.3",
+    "release-it": "^17.6.0",
     "request": "^2.88.0"
   }
 }
