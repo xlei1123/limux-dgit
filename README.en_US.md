@@ -27,6 +27,7 @@
 - [Configuration](#configuration)
 - [TIPS](#tips)
 - [Example](#example)
+- [Changelog](#changelog)
 - [Questions](#questions)
 - [License](#license)
 
@@ -158,6 +159,9 @@ When downloading the private repo, you need to provide download permission. At t
     ```bash
     $ dgit d https://github.com/xlei1123/limu-ele-pro/tree/master/src -d ./abc -t OAUTH-TOKEN
     ```
+
+## Changelog
+Detailed changes for each release are documented in the [release notes](https://github.com/xlei1123/dgit/releases)
 
 ## Questions
 Please open an issue [here](https://github.com/xlei1123/dgit/issues).

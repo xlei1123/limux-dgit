@@ -27,6 +27,7 @@
 - [配置](#配置)
 - [注意](#注意)
 - [示例](#示例)
+- [更改日志](#更改日志)
 - [建议](#建议)
 - [License](#license)
 
@@ -173,6 +174,8 @@ import dgit from '@limu-x/dgit';
     199.232.68.133 raw.githubusercontent.com # 美国
     151.101.76.133 raw.githubusercontent.com # 中国香港
     ```
+## 更改日志
+每个版本的详细变更都记录在[发布说明](https://github.com/xlei1123/dgit/releases)中
 
 ## 建议
 欢迎创建issue 或者 pr [here](https://github.com/xlei1123/dgit/issues).
