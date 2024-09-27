@@ -19,7 +19,8 @@
     "test:mocha": "nyc --reporter=text mocha --require ts-node/register 'test/**/*.{ts,tsx}' -t 60000",
     "test:mocha:reporter": "nyc --reporter=lcov --reporter=text mocha --require ts-node/register 'test/**/*.{ts,tsx}' -t 60000 --reporter=mochawesome",
     "watch:ts": "tsc --watch",
-    "prepublishOnly": "npm run test:mocha && npm run lint && npm run build:ts"
+    "prepublishOnly": "npm run test:mocha && npm run lint && npm run build:ts",
+    "release": "release-it"
   },
   "lint-staged": {
     "**/*.{jsx,js}": [
@@ -66,6 +67,7 @@
     "inquirer": "^7.0.0",
     "ora": "^4.0.3",
     "progress": "^2.0.3",
+    "release-it": "^17.6.0",
     "request": "^2.88.0"
   }
 }
